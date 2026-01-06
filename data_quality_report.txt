@@ -1,0 +1,85 @@
+ETL Data Quality Metrics
+-------------------------------
+--------------------------------
+Number of duplicates removed
+[Customers dataset]
+Duplicate record found: C001 – Rahul Sharma appears twice (identical record)
+Duplicates removed (Customers): 1
+
+[Transactions dataset]
+Duplicate record found:
+T001 appears twice with identical values
+Duplicates removed (Transactions): 1
+
+[Products dataset]
+No duplicate product_id values
+Duplicates removed (Products): 0
+
+Total duplicates removed
+2 duplicate records removed
+
+Number of missing values handled
+------------------------
+[Customers dataset]
+Missing email values:
+C003 – Amit Kumar,C007 – Ravi Verma, C012 – Lakshmi Krishnan, C018 – Kavya Reddy, C023 – Rohit Kapoor
+Missing values handled (Customers): 5
+
+[Products dataset]
+Missing values:
+Missing price: P003 – Apple MacBook Pro, P010 – OnePlus Nord, P017 – H&M Shirt
+Missing stock_quantity:
+P006 – Organic Almonds
+
+Missing values handled (Products): 4
+
+[Transactions dataset]
+Missing critical fields:
+Missing customer_id:
+T004, T016, T030
+
+Missing product_id:
+
+T008, T025
+These records require handling (drop or impute depending on business rules).
+Missing values handled (Transactions): 5
+
+Total missing values handled
+14 missing values handled 
+
+3️⃣ Number of records loaded successfully
+Customers
+Original records: 26
+After deduplication: 25
+Customers loaded: 25
+Products
+Original records: 20
+After cleaning: 20
+Products loaded: 20
+Transactions
+Original records: 41
+Duplicates removed: 1
+Records with missing critical IDs removed: 5
+41 − 1 − 5 = 35
+Transactions loaded: 35
+
+Final Load Summary
+--------------------
+Dataset	Records Loaded
+Customers	25
+Products	20
+Transactions	35
+Total records loaded successfully
+
+80 records
+
+
+Final Answer (Concise)
+-----------------------------
+
+Number of duplicates removed: 2
+
+Number of missing values handled: 14
+
+Number of records loaded successfully: 80
+
